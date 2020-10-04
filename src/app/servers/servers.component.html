@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <!--card starts here-->
+    <div *ngFor="let i of Servers" class="card mb-3" 
+    [ngClass]="{'bg-info':i.IsOnline, 'bg-danger':!i.IsOnline}" style="max-width: 18rem;">
+     <div class="card-header">{{i.Name|lowercase|uppercase}}</div>
+     <div class="card-body">
+       <h5 class="card-title">Server ID is {{i.ID}}</h5>
+       <p class="card-text">This Server has {{i.Ram}}GB of RAM. 
+         This server costs {{4000|currency:'USD':false}}
+         <button (click)="toggle(i.ID)" class="btn btn-success">Toggle</button>
+       </p>
+     </div>
+   </div>
+    <!--card ends here-->
+   </div>
+
+
+    
+  </div>
+  <div class="col-md-6">
+    For Future
+  </div>
+</div>

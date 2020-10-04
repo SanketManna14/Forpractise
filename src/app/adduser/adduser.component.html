@@ -1,0 +1,40 @@
+
+
+<div class="container-fluid">
+    <div class="row">
+        <h1>Add User</h1>
+        <div class="col-md-6">
+
+            <!--Form Starts here-->
+
+            <form (submit)="submitForm($event)">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" name="email" [(ngModel)]="FormData.email" placeholder="Enter your Email"   class="form-control" id="email" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" name="name" [(ngModel)]="FormData.name" placeholder="Enter your Name" class="form-control" id="name">
+                </div>
+                <div class="mb-3">
+                    <label for="mobile" class="form-label">Mobile</label>
+                    <input type="number" name="mobile" [(ngModel)]="FormData.mobile" placeholder="Enter your Mobile" class="form-control" id="mobile">
+                  </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-warning ml-3">Reset</button>
+              </form>
+              
+            
+
+
+            <!--Form Ends here-->
+
+        </div>
+        <div class="col-md-6">
+            
+        </div>
+    </div>
+</div>
+
